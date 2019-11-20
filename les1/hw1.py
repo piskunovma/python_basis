@@ -4,7 +4,7 @@
 выведите на экран.
 """
 name = 'Mikhail'
-surname = 'Piskunov'
+surname = 'Piskunov' 
 age = 22
 
 print(name, surname, age)
