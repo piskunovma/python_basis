@@ -23,6 +23,6 @@ finish_result = int(input("Введите конечное количество 
 i = 1
 while begin_result < finish_result:
     begin_result = begin_result * 0.1 + begin_result
-    # print(round(begin_result, 2)) Использовал для проверки
+    # print(f"День {i + 1}, {round(begin_result, 2)} километров") Использовал для проверки
     i += 1
 print(f"На {i}-й день спортсмен достиг результата — не менее {finish_result} км.")
