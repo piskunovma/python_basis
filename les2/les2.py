@@ -34,12 +34,12 @@
 #
 # print(type(var_tuple))
 
-var1 = ([1, 2, 3], [4, 5, 6])
-var2 = var1
-
-var2[0].append(111)
-
-print(var1)
+# var1 = ([1, 2, 3], [4, 5, 6])
+# var2 = var1
+#
+# var2[0].append(111)
+#
+# print(var1)
 
 # user_data = (
 #     {'name': 'Ваше имя?', 'type': str},
