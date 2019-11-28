@@ -6,28 +6,25 @@
 Подсказка: попробуйте решить задачу двумя способами. Первый — возведение в степень с помощью оператора *.
 Второй — более сложная реализация без оператора *, предусматривающая использование цикла.
 """
-# Первый вариант с помощью оператора **
+# # Первый вариант с помощью оператора **
 # def my_func(x, y):
-#     if y % 2 == 0:
-#         return x ** y.__abs__()
-#     else:
-#         return x ** y.__abs__() * -1
+#     return x ** y
 #
-# print(my_func(2, -12))
+# print(my_func(2, -3))
 
-# Вариант с помощью рекурсии (не удалось придумать вывод отрицательных значений, выводит всегда положительное)
+# Вариант с помощью рекурсии
 # def my_func(x, y):
 #     y = y.__abs__()
 #     if y == 0:
 #         return 1
 #     elif y == 1:
-#         return x
+#         return 1 / x
 #     elif y % 2 != 0:
 #         return x * my_func(x, y - 1)
 #     elif y % 2 == 0:
 #         return my_func(x * x, y / 2)
 #
-# print(my_func(2, -6))
+# print(my_func(2, -4))
 
 # Вариант с циклом
 def my_func(x, y):
@@ -40,9 +37,6 @@ def my_func(x, y):
         while i < y:
             result = result * x
             i += 1
-    if y % 2 == 0:
-        return result
-    else:
-        return result * -1
+    return 1 / result
 
-print(my_func(3, -3))
+print(my_func(2, -4))
