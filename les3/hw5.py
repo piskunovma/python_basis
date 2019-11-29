@@ -9,3 +9,22 @@
 и после этого завершить программу.
 """
 
+def sum_numbers():
+    var_memory = 0
+    while True:
+        numbers = input('Введите строку чисел, разделенных пробелом  (или "q" для выхода): \n')
+        if numbers == "q":
+            return "Exit"
+        try:
+            result = sum(map(int, numbers.split())) + var_memory
+            var_memory = result
+            print(result)
+        except ValueError as e:
+            if numbers[-1] == "q":
+                numbers = numbers[:-1]
+                result = sum(map(int, numbers.split())) + var_memory
+                return result
+            print("Введите числа для продолжения, или символ 'q' для выхода из программы.")
+            continue
+
+print(sum_numbers())
