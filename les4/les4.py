@@ -122,10 +122,23 @@
 #     for line in file:
 #         print(line)
 
-from my_package.my_pack import my_func
+# from my_package.my_pack import my_func
+#
+# for itm in my_func(5):
+#     print(itm)
+#
+# if __name__ == '__main__':
+#     print('main')
 
-for itm in my_func(5):
-    print(itm)
 
-if __name__ == '__main__':
-    print('main')
+# C помощью лямбды
+# def fibo_gen():
+#     yield (reduce(lambda x, y: x*y, [i for i in range(1, fact_number + 1)]))
+
+# while True:
+#     fact_number = input("Введите число, для расчета факториала числа: \n")
+#     try:
+#         fact_number = int(fact_number)
+#         break
+#     except ValueError:
+#         print("Введите число!")
