@@ -48,13 +48,5 @@ result_list.append(dict_average)
 print(result_list)
 my_f.close()
 
-
-data = {
-    "income": {
-        "salary": 50000,
-        "bonus": 20000
-    }
-}
-
 with open("my_file.json", "w") as write_f:
     json.dump(result_list, write_f)
