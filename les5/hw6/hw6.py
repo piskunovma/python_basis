@@ -16,19 +16,22 @@
 
 my_f = open("text6.txt", "r")
 
+numb_in = int()
 result_data = {}
+
 for line in my_f:
     res = list(line.split())
     numb = str()
     result = int()
-    numb_in = int()
     for i in res:
         numb = str()
+        numb_in = int()
         for a in i:
             if a.isdigit():
                 numb += str(a)
                 numb_in = int(numb)
         result += numb_in
-        result_data = {res[0]: result}
-        numb_in = int()
-    print(result_data)
+        result_data[res[0]] = result
+
+my_f.close()
+print(result_data)

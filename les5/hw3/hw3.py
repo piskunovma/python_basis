@@ -7,20 +7,20 @@
 
 my_f = open("text3.txt", "r", encoding="utf-8")
 
-x = 1
-y = 1
-b = int()
-z = 0
+surname = 1
+itm = 1
+result_profit = int()
+sum_collaborators = 0
 for line in my_f:
-    if x == 1:
+    if surname == 1:
         print(line.split()[0])
-        x = 0
-    x += 1
-    if y == 1:
-        a = int(line.split()[1])
-        b += a
-        y = 0
-    y += 1
-    z += 1
-print(f'Средняя величина дохода сотрудников - {b / z}')
+        surname = 0
+    surname += 1
+    if itm == 1:
+        income = int(line.split()[1])
+        result_profit += income
+        itm = 0
+    itm += 1
+    sum_collaborators += 1
+print(f'Средняя величина дохода сотрудников - {result_profit / sum_collaborators}')
 my_f.close()

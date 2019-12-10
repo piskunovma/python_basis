@@ -17,3 +17,5 @@ try:
     my_f.close()
 except ValueError:
     print("Введите числа, а не символы!")
+
+my_f.close()
