@@ -19,26 +19,31 @@ class Matrix:
     def __str__(self):
         for i in range(len(self.lst)):
             print(self.lst[i])
-        return f'Начальная матрица \n'
+        return ''
 
     def __add__(self, other):
-        res_mc = [[0, 0], [0, 0]]
+        res_mc = [[0 for i in range(len(self.lst[0]))] for x in range(len(self.lst))]
+        # print(res_mc)
         for itm in range(len(self.lst)):
             for j in range(len(self.lst[0])):
                 res_mc[itm][j] = (self.lst[itm][j] + other.lst[itm][j])
         for im in range(len(res_mc)):
             print(res_mc[im])
-        return 'Итоговая матрица'
+        return ''
 
 mc1 = Matrix([
-    [10, 20],
-    [20, 30]
+    [10, 20, 1],
+    [20, 30, 2],
+    # [3, 4, 3]
 ])
 
 mc2 = Matrix([
-    [1, 2],
-    [3, 4]
+    [1, 2, 4],
+    [3, 4, 5],
+    # [4, 6, 7]
 ])
 
 print(mc1)
+print(mc2)
 print(mc1 + mc2)
+# a = mc1.__str__()
